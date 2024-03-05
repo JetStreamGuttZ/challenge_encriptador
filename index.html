@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="cuerpoPrincipal">  
+    <header>
+        <img src="Imagenes/Logo.svg" class="logo">
+    </header>
+
+    <main>
+        <div class="main">
+            <div class="elementosIzquierda">
+                <textarea class="ingresoDeTexto" placeholder="Ingrese su texto aquí"></textarea>
+                <p class="advertencia"><img src="Imagenes/exclamation-circle-fill.svg" class="advertenciaImg"> Solo letras minúsculas y sin acentos.</p>
+                <div class="botones">
+                    <button onclick="mostrarCifrado();" value="Encriptar" class="botonEncriptar" id="botonENcriptar">Encriptar</button>
+                    <button onclick="desencriptar();" value="Desencriptar" class="botonDesencriptar" id="botonDEsencriptar">Desencriptar</button>
+                </div>
+            </div>
+
+            <div class="elementosDerecha">
+                <div class="mensajesCuadroBlanco" id="mensajesCuadroBlanco">
+                    <img src="Imagenes/Muñeco.svg" class="muneco" id="muneco"> 
+                    <h2 class="mensaje" id="mensaje">Ningún mensaje fue <br>encontrado</h2>
+                    <p class="mensaje2" id="mensaje2">Ingrese el texto que desees encriptar o <br> desencriptar.</p>
+                </div>  
+                <textarea readonly="readonly" class="textoResultado" id="textoResultado"></textarea>
+                <button class="botonCopiar" id="botonCopiar" onclick="copiar();">Copiar</button> 
+            </div>
+            <div class="espacio"></div>
+            
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+

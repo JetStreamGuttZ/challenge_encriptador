@@ -1,0 +1,304 @@
+.cuerpoPrincipal{
+    max-width: 1440px;
+    font-family: "Inter", sans-serif;
+    background-color: #F3F5FC;
+    margin:auto;
+}
+/*header*/
+header{
+    width: 60%;
+    margin:40px 0 0 40px;
+}
+
+/*main*/
+.main{
+    display:flex;
+    height: calc(100vh - 91px - 72px);
+}
+/*Elementos de la izquierda*/
+
+.elementosIzquierda{
+    width:50%;
+    height: 100%;
+    margin: 0 auto 0 14%;
+}
+
+.ingresoDeTexto{
+    margin: 20% 0 0;
+    width: 100%;
+    height: 50%;
+    font-size: 32px;
+    border:none;
+    font-family: "Inter", sans-serif;
+    background-color: #F3F5FC;
+    color: #0A3871;
+    /* Propiedad para que no aparezca el borde al seleccionar el text area */
+    outline:none; 
+    /* Propiedad para impedir que el textarea sea redimensionado */
+    resize:none;
+}
+
+/* Mensaje que aparece en el "fondo" del textarea */
+.ingresoDeTexto::placeholder{
+    color:#0A3871;
+}
+
+.advertencia{
+    font-size:12px;
+    margin: 11% 0 0;
+}
+
+.advertenciaImg{
+    height:12px;
+}
+
+.botones{
+    width:100%;
+    margin:2% 0 0%;
+    gap:24px;
+}
+
+.botonEncriptar{
+    width: 45%;
+    height: 67px;
+    border-radius: 24px;
+    padding: 24px;
+    background-color: #0A3871;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    /* Se específica las propiedades del borde del botón ya que en caso contrario este adquiere un comportamiento no esperado */
+    border: 1px solid black;
+    gap:8px;
+    font-weight: 400;
+    margin-right: 3%;
+    margin-bottom: 5%;
+    min-width: 150px;
+}
+
+/* Propiedad para cambiar el color al posicionar el cursor sobre el botón */
+.botonEncriptar:hover{
+    background-color: #042348;
+}
+
+/* Propiedad para cambiar el color del cursor al dar click en el botón */
+.botonEncriptar:active{
+    background-color: #031225;
+    border: 1px solid rgb(65, 65, 65);
+}
+
+.botonDesencriptar{
+    width: 45%;
+    height: 67px;
+    border-radius: 24px;
+    padding: 24px;
+    background-color: #D8DFE8;
+    color: #0A3871;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #0A3871;
+    gap:8px;
+    font-weight: 400;
+    min-width: 150px;
+}
+
+.botonDesencriptar:hover{
+    background-color: #a2a8af;
+}
+
+.botonDesencriptar:active{
+    background-color: #7a7f84;
+    border: 1px solid #1053a5;
+}
+
+/* Elementos de la derecha */
+
+.elementosDerecha{  
+/* Utilizo el position:absolute para lograr sobreponer el cuadro blanco sobre el header */
+    position:absolute;
+    top:0;
+    right:0;
+    display:flex;
+    flex-direction: column;
+    background-color: white;
+    margin:40px 7% 40px auto;
+    height:90%;
+    width: 28%;
+    border-radius: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0,0,0,0.08);
+    
+}
+
+
+.mensajesCuadroBlanco{
+    margin:auto auto;
+    max-width: 400px;
+    width:100%;
+}
+
+.muneco{
+    width: 100%;
+}
+
+.mensaje{
+    margin:5px auto;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 28.8px;
+    text-align: center;
+    color:#343A40;
+    gap:16px;
+}
+
+.mensaje2{
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color:#343A40;
+    gap:16px;
+    padding:10px;
+}
+
+.textoResultado{
+    margin: 10px auto;
+    width: 90%;
+    height: 90%;
+    font-size: 32px;
+    border:none;
+    font-family: "Inter", sans-serif;
+    background-color: white;
+    color: #0A3871;
+    outline:none;
+    display: none;
+    resize:none;
+}
+
+.botonCopiar{
+    text-align: center;
+    width:80%;
+    height: 67px;
+    margin: 10% 10%;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 400;
+    background-color: white;
+    border:1px solid #0A3871;
+    display:none;
+}
+
+.botonCopiar:hover{
+    background-color: rgb(222, 222, 222);
+}
+
+.botonCopiar:active{
+    background-color: rgb(151, 151, 151);
+    border:1px solid #196fd9;
+}
+
+.mensajeAjustado{
+    align-items: flex-end;
+}
+
+.mensajesCuadroBlancoAjustado{
+    margin: 10px auto;
+}
+
+/* Espacio para que los elementos de la derecha no queden pegados a la parte inferior de la pagina */
+
+.espacio{
+    position:absolute;
+    bottom:0;
+    left:0;
+    background-color:#F3F5FC;
+    width:100%;
+    height:10px;
+    display:none;
+}
+
+/* Cambio de algunas propiedades al tener una pantalla inferior a 768px */
+@media (max-width: 768px){
+    .cuerpoPrincipal{
+        display:flex;
+        flex-direction: column;
+        height: 90vh;
+    }
+
+    header{
+        display:flex;
+        flex-direction: row;
+        width:100%;
+        margin:40px auto;
+    }
+
+    .logo{
+        margin:0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .elementosIzquierda{
+        width: 100%;
+        margin-left: 3%;
+    }
+
+    .ingresoDeTexto{
+        width: 80%;
+        height: 50%;
+        margin: 10px auto;
+    }
+
+    .elementosDerecha{
+       width:80%;
+       height:30vh;
+       right: 10%;
+       top: 77%;
+       margin-right: 0;
+    }
+    .muneco{
+        display:none;
+    }
+    
+    .textoResultado{
+        width:90%;
+        margin:10px auto;
+        height:65%;
+    }
+
+    .botonCopiar{
+        margin:5% auto;
+        height:20%;
+    }
+
+    footer{
+        margin-top: 22%;
+    }
+
+    .espacio{
+        display:block;
+        bottom:0;
+        left:0;
+        top:115%;
+    }
+}
+
+/* Cambio de algunas propiedades al tener una pantalla inferior a 400px */
+@media (max-width: 400px){
+    .botones{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .elementosDerecha{
+        top:90%;
+    }
+
+    .botonEncriptar{
+        margin:0;
+    }
+
+    .espacio{
+        margin-top:23%;
+    }
+}
